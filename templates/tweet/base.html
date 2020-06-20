@@ -47,7 +47,9 @@
 
                                     <!-- side navigation list item start -->
                                     <li class="side-navigation-list-item">
-                                        <a href="#" class="active clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
+                                        <a
+                                            href="{% url 'tweet:index' %}"
+                                            class="active clearfix w-auto p-2 px-4 mt-2 transition-3 inline-block rounded-full">
                                             <i class="icon float-left">
                                                 <svg viewbox="0 0 24 24">
                                                     <g>
@@ -179,9 +181,11 @@
                             <!-- side navigation end -->
 
                             <!-- right side tweet button start -->
-                            <div class="tweet-button my-4">
-                                <button class="p-3 twitter-bg text-white w-full rounded-full font-bold tracking-wide">Tweet</button>
-                            </div>
+                            <a href="{% url 'tweet:post-create' %}">
+                                <div class="tweet-button my-4">
+                                    <button class="p-3 twitter-bg text-white w-full rounded-full font-bold tracking-wide">Tweet</button>
+                                </div>
+                            </a>
                             <!-- right side tweet button end -->
 
                         </div>
